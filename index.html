@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>HABAO88｜AI・工具・網站・更多應用</title>
+  <meta name="description" content="HABAO88 整合 AI、實用工具、網站與更多數位應用，持續探索更多可能。">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Noto Sans TC", Arial, sans-serif;
+      background: #070c13;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* 頂部 */
+    header {
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1180px;
+      margin: auto;
+      padding: 0 24px;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+
+    .logo span {
+      color: #ffd338;
+    }
+
+    .nav-text {
+      font-size: 14px;
+      color: #aab4c3;
+    }
+
+    /* 首屏 */
+    .hero {
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 24px 90px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: #0b69ff;
+      opacity: 0.12;
+      filter: blur(130px);
+      border-radius: 50%;
+      top: -280px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+    }
+
+    .mini-title {
+      color: #ffd338;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(52px, 9vw, 90px);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -4px;
+    }
+
+    h1 span {
+      color: #ffd338;
+    }
+
+    .hero h2 {
+      font-size: clamp(22px, 4vw, 34px);
+      margin-top: 22px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      color: #9aa7b8;
+      margin: 12px auto 30px;
+      font-size: 17px;
+    }
+
+    .main-btn {
+      display: inline-block;
+      background: #ffd338;
+      color: #101010;
+      padding: 14px 32px;
+      border-radius: 999px;
+      font-weight: 800;
+      transition: 0.2s;
+    }
+
+    .main-btn:hover {
+      transform: translateY(-2px);
+      background: #ffe16b;
+    }
+
+    /* 內容 */
+    .container {
+      max-width: 1050px;
+      margin: auto;
+      padding: 80px 24px;
+    }
+
+    .section-title {
+      font-size: 28px;
+      margin-bottom: 24px;
+    }
+
+    /* 哈寶足球AI */
+    .service-card {
+      background:
+        linear-gradient(120deg, rgba(13,30,49,.98), rgba(7,13,21,.95));
+      border: 1px solid #24364a;
+      border-radius: 24px;
+      padding: 38px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    }
+
+    .service-label {
+      display: inline-block;
+      color: #ffd338;
+      font-size: 13px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .service-card h3 {
+      font-size: 32px;
+      margin-bottom: 6px;
+    }
+
+    .service-card p {
+      color: #9ca9b8;
+      margin-bottom: 20px;
+    }
+
+    .service-icon {
+      font-size: 78px;
+    }
+
+    .use-btn {
+      display: inline-block;
+      background: #1677ff;
+      padding: 11px 23px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    /* 更多服務 */
+    .more-section {
+      margin-top: 80px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .future-card {
+      background: #0e1621;
+      border: 1px solid #1c2a39;
+      border-radius: 18px;
+      padding: 26px 16px;
+      text-align: center;
+    }
+
+    .future-card .icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .future-card strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .future-card small {
+      color: #68778a;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid #182331;
+      text-align: center;
+      padding: 55px 20px;
+      color: #697789;
+    }
+
+    .footer-logo {
+      color: #fff;
+      font-size: 24px;
+      font-weight: 900;
+      margin-bottom: 5px;
+    }
+
+    .footer-logo span {
+      color: #ffd338;
+    }
+
+    /* 手機 */
+    @media (max-width: 700px) {
+      header {
+        height: 64px;
+      }
+
+      .nav-text {
+        display: none;
+      }
+
+      .hero {
+        min-height: 500px;
+        padding-top: 55px;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .container {
+        padding: 55px 18px;
+      }
+
+      .service-card {
+        padding: 28px 22px;
+      }
+
+      .service-icon {
+        font-size: 52px;
+      }
+
+      .service-card h3 {
+        font-size: 25px;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">HABAO<span>88</span></div>
+  <div class="nav-text">探索更多可能</div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="mini-title">ONE PLATFORM · MORE POSSIBILITIES</div>
+
+    <h1>HABAO<span>88</span></h1>
+
+    <h2>AI・工具・網站・更多應用</h2>
+
+    <p>
+      一個入口，探索更多可能。
+      <br>
+      持續打造簡單、實用、有趣的數位服務。
+    </p>
+
+    <a href="#services" class="main-btn">開始探索 ↓</a>
+  </div>
+</section>
+
+<main class="container" id="services">
+
+  <h2 class="section-title">目前服務</h2>
+
+  <div class="service-card">
+
+    <div>
+      <span class="service-label">NOW AVAILABLE</span>
+
+      <h3>哈寶足球 AI</h3>
+
+      <p>
+        多維賽事量化分析<br>
+        用數據，看見更多可能
+      </p>
+
+      <a
+        href="https://awu7757-sys.github.io/habao-football-ai/"
+        class="use-btn"
+        target="_blank"
+        rel="noopener"
+      >
+        立即使用 →
+      </a>
+    </div>
+
+    <div class="service-icon">⚽</div>
+
+  </div>
+
+
+  <section class="more-section">
+
+    <h2 class="section-title">更多服務</h2>
+
+    <div class="grid">
+
+      <div class="future-card">
+        <div class="icon">🤖</div>
+        <strong>AI 工具</strong>
+        <small>即將上線</small>
+      </div>
+
+      <div class="future-card">
+        <div class="icon">🛠️</div>
+        <strong>實用工具</strong>
+        <small>即將上線</small>
+      </div>
+
+      <div class="future-card">
+        <div class="icon">🌐</div>
+        <strong>網站服務</strong>
+        <small>即將上線</small>
+      </div>
+
+      <div class="future-card">
+        <div class="icon">🛍️</div>
+        <strong>選物賣場</strong>
+        <small>即將上線</small>
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+
+  <div class="footer-logo">
+    HABAO<span>88</span>
+  </div>
+
+  <div>持續更新更多實用服務</div>
+
+</footer>
+
+</body>
+</html>
