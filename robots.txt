@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://awu7757-sys.github.io/habao88/sitemap.xml
